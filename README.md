@@ -7,6 +7,9 @@ Welcome to the **SUno** project, a **terminal-based** implementation of the **UN
 
 This project was developed as a way to study and practice the C language, focusing on **modularization, coding best practices, code structure, and game logic**. The goal was to create a **challenging, fun, and faithful** experience based on the official UNO rules.
 
+> [!IMPORTANT]  
+> This project has been archived and will no longer receive updates. If you wish to see its other version, as well as other similar projects, please visit the [c_projects](https://github.com/Starciad/c_projects) repository.
+
 ## How to Play
 
 The game is fully functional and can be downloaded from the **RELEASES** section. Check it out at the link below:
