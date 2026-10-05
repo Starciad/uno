@@ -1,151 +1,57 @@
-# 🎴 『 Super Uno 』 🎴
+# Uno
 
-![screenshot_1]
-> Stylized logo of the project on the terminal.
+A terminal-based UNO game implementation in C with AI opponents and full rule support.
 
-Welcome to the **SUno** project, a **terminal-based** implementation of the **UNO** card game, written in **C** and following the **C99 standard**.
+## Features
 
-This project was developed as a way to study and practice the C language, focusing on **modularization, coding best practices, code structure, and game logic**. The goal was to create a **challenging, fun, and faithful** experience based on the official UNO rules.
+- Text-based game interface
+- Complete official UNO rules
+- AI system with varying strategies
+- Multiplayer support (2-10 players)
+- C standard libraries only
+- Modular, easy-to-extend code
 
-> [!IMPORTANT]  
-> This project has been archived and will no longer receive updates. If you wish to see its other version, as well as other similar projects, please visit the [c_projects](https://github.com/Starciad/c_projects) repository.
+## Game Overview
 
-## How to Play
+UNO is a card game created by Merle Robbins in 1971. Players race to discard all their cards.
 
-The game is fully functional and can be downloaded from the **RELEASES** section. Check it out at the link below:
+**Quick Facts:**
 
-- <https://github.com/Starciad/SUno/releases>
+- Players: 2–10
+- Cards: 108
+- Playtime: 15–30 minutes
 
-Download the appropriate version for your operating system. After that, extract the compressed file to the location you want on your computer. Then, simply run the executable file.
+**Core Rules:**
 
-## About the Project
+- Start with 7 cards
+- Play cards matching the top card by number, color, or type
+- Draw a card if you can't play
+- Declare "UNO" with one card left (penalty: draw 2)
 
-**SUno** is a **fully terminal-based** UNO game, providing a **smooth and immersive** gameplay experience with support for **solo mode against AI opponents**.
+**Special Cards:**
 
-### **Main Features**
+| card               | Effect                                        |
+| ------------------ | --------------------------------------------- |
+| **Skip**           | Next player loses turn                        |
+| **Reverse**        | Reverses turn order                           |
+| **Draw Two**       | Next player draws 2, loses turn               |
+| **Wild**           | Choose a color                                |
+| **Wild Draw Four** | Choose color, next player draws 4, loses turn |
 
-- Intuitive text-based game interface.
-- Full implementation of the official UNO rules.
-- **AI system for bots**, each with slightly different strategies.
-- Detailed messages to track moves and actions.
-- Support for **multiple players** against AI opponents.
-- Well-structured and modular code following best practices.
-- Uses only **C standard libraries**.
+## Compilation and Execution
 
-The code structure has been carefully designed to be **easy to understand, modify, and expand**, allowing for future feature additions.
+To compile and run the Uno game, follow these steps:
 
-## About the UNO Game
+1. Ensure you have a C compiler (e.g., `gcc`) and make installed.
+2. In this directory, run the following command to compile the game:
 
-**UNO** is an American card game created by **Merle Robbins and family** in **1971**. Over the years, it has become one of the **most popular card games worldwide**, with various themed editions and rule variations.
-
-### **Quick Facts**
-
-- **Number of players**: 2 – 10  
-- **Number of cards**: 108  
-- **Average playtime**: 15 – 30 minutes  
-
-### **Rules Used**
-
-- The objective of the game is to be the first player to get rid of all their cards.
-
-- Each player starts with **7 cards**, and a card from the top of the deck is flipped to start the **discard pile**. During the game, players must **play a card that matches the top card** of the discard pile by **number, color, or type**. If they cannot play, they must **draw a card**.
-
-- The deck includes **number cards (0–9)** and **special action cards**, as shown in the table below:
-
-| Card            | Effect |
-|----------------|--------|
-| **Skip**       | The next player **loses their turn**. |
-| **Reverse**    | **Reverses** the turn order. |
-| **Draw Two (+2)** | The next player **draws 2 cards** and loses their turn. |
-| **Wild**       | Allows the player to **choose a new color**. |
-| **Wild Draw Four (+4)** | Allows the player to **choose a new color**, forces the next player to **draw 4 cards**, and lose their turn. |
-
-- If a player has only **one card left**, they must declare "**UNO!**". If caught not saying it, they must **draw 2 penalty cards**. The game continues until one player has no cards left.
-
-- When a player draws a card, his turn is passed.
-
-![uno_deck]
-> A complete deck of UNO cards.
-
-## Screenshots
-
-![screenshot_2]
-> Player list displayed after game starts.
-
----
-
-![screenshot_3]
-> Player HUD.
-
----
-
-![screenshot_4]
-> Bots playing the game.
-
-## Contributions
-
-Contributions are welcome! If you want to **fix bugs, optimize the code, or add new features**, follow these steps:
-
-1. **Fork** the repository.
-2. Create a **new branch** for your changes:
-
-    ```sh
-    git checkout -b my-modification
+    ```bash
+    make
     ```
 
-3. Make your changes and **commit with a descriptive message**:
+3. When building the application, two directories will appear: `obj` and `bin`. The program executable is located in the `bin` directory.
+4. To run the game, execute the following command:
 
-    ```sh
-    git commit -m "feat: improved AI logic."
+    ```bash
+    ./bin/uno
     ```
-
-4. Push your changes to your repository:
-
-    ```sh
-    git push origin my-modification
-    ```
-
-5. Open a **Pull Request (PR)** so your changes can be reviewed.
-
-If you find a bug or have a suggestion, feel free to **open an issue**! 🚀
-
-## Compiling the Project
-
-To compile **SUno**, you need a **C compiler** that supports **C99**. The code can be easily compiled using **GCC**.
-
-### **1. Clone the repository**
-
-```sh
-git clone https://github.com/Starciad/SUno.git
-cd SUno
-```
-
-### **2. Compile the code**
-
-Make sure you have **GCC** and **make** installed in your environment. Then, navigate to the `project/` directory and run `make`. The game will compile and generate an executable.
-
-### **3. Run the game**
-
-```sh
-./SUno
-```
-
-If you prefer to compile manually, ensure that all `*.c` files are being compiled correctly and that the headers in `include/` are included.
-
-## License
-
-This project is licensed under the **MIT License**.  
-This means you are free to **use, modify, and distribute** the code, as long as proper credit is given to the original author.
-
-For more details, check the [`LICENSE`](LICENSE) file.
-
-## Acknowledgments
-
-🎴 ➥ Thank you for checking out this project. Have fun playing UNO in the terminal! 😃
-
-<!-- IMAGES & ASSETS -->
-[uno_deck]: ./.github/assets/images/general/uno_deck.webp
-[screenshot_1]: ./.github/assets/images/screenshots/screenshot_1.webp
-[screenshot_2]: ./.github/assets/images/screenshots/screenshot_2.webp
-[screenshot_3]: ./.github/assets/images/screenshots/screenshot_3.webp
-[screenshot_4]: ./.github/assets/images/screenshots/screenshot_4.webp
